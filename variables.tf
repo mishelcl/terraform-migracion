@@ -117,7 +117,7 @@ variable "key_name" {
 
 variable "tags_ec2" {
   description = "(Optional) A map of tags to assign to the ec2 resource."
-  type        = map
+  type        = map(any)
 }
 
 ## RDS SQL Server Variables 
@@ -184,13 +184,13 @@ variable "multi_az" {
 }
 
 variable "storage_encrypted" {
-  description = " (Optional) Specifies whether the DB instance is encrypted. "  
-  type = bool
+  description = " (Optional) Specifies whether the DB instance is encrypted. "
+  type        = bool
 }
 
 variable "skip_final_snapshot" {
   description = "(Optional) Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. "
-  type = bool
+  type        = bool
 }
 
 ## RDS postgre SQL DB
@@ -247,17 +247,17 @@ variable "multi_az_db" {
 }
 
 variable "storage_encrypted_db" {
-  description = " (Optional) Specifies whether the DB instance is encrypted. "  
-  type = bool
+  description = " (Optional) Specifies whether the DB instance is encrypted. "
+  type        = bool
 }
 
 variable "skip_final_snapshot_db" {
   description = "(Optional) Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. "
-  type = bool
+  type        = bool
 }
 
 // Common tags
 variable "tags" {
   description = "(Optional) A map of tags to assign to the resource."
-  type        = map
+  type        = map(any)
 }

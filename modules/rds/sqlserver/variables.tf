@@ -61,26 +61,26 @@ variable "multi_az" {
 }
 
 variable "storage_encrypted" {
-  description = " (Optional) Specifies whether the DB instance is encrypted. "  
-  type = bool
+  description = " (Optional) Specifies whether the DB instance is encrypted. "
+  type        = bool
 }
 
 variable "skip_final_snapshot" {
   description = "(Optional) Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. "
-  type = bool
+  type        = bool
 }
 
 variable "vpc_security_group_ids" {
   description = "(Optional) List of VPC security groups to associate."
-  type = list
+  type        = list(any)
 }
 
 variable "db_subnet_group_name" {
   description = "(Optional) Name of DB subnet group. "
-  type = string
+  type        = string
 }
 
 variable "tags" {
   description = "(Optional) A map of tags to assign to the resource."
-  type        = map
+  type        = map(any)
 }
